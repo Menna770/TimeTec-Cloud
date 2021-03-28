@@ -1,0 +1,419 @@
+body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
+
+/* Start Navbar*/
+.header-navbar {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    font-size: 14px;
+}
+
+.header-navbar .navbar {padding: 0;}
+
+.header-navbar .nav-link {padding-bottom: 0;}
+
+.header-navbar .log-link {margin-left: 20px;}
+
+.header-navbar .log-in-btn .fa-lock {font-size: 12px;}
+
+.header-navbar .search-site {
+    width: 180px;
+    height: 35px;
+    border-radius: 50px;
+}
+
+.header-navbar .dropdown-menu {
+    animation-name: SlideMenu;
+    animation-duration: 0.3s;
+}
+
+@keyframes SlideMenu
+{
+    0% {transform: translateY(1rem); opacity: 0;}
+
+    100% {transform: translateY(0); opacity: 1;}
+}
+.header-navbar .dropdown:hover .dropdown-menu {display: block;}
+
+.header-navbar .dropdown-menu ul { list-style-type: disc;}
+
+.header-navbar .dropdown-item {font-size: 12px; padding: .25rem 4rem .25rem 0;}
+
+.header-navbar .navbar .nav-link {text-transform: uppercase;}
+
+.navbar .log-in-btn,
+.navbar .sign-up-btn {color: #23baed; padding: 5px;}
+
+.navbar .sign-up-btn {
+    border: none;
+    background: none;
+}
+
+.navbar .log-in-btn:hover {
+    background-color: #EDEDED;
+    border-radius: 5px;
+}
+
+.navbar .log-in-btn a, 
+.navbar .log-in-btn a:hover {color: #23baed !important;}
+
+.navbar .log-link .login-form {
+    width: 250px;
+    z-index: 999;
+    right: 0;
+    top: 100%;
+    padding: 2rem 1rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: none;
+    animation-name: SlideMenu;
+    animation-duration: 0.3s;
+}
+.log-in-btn:hover .login-form {display: block;}
+
+.navbar .login-form .login-form-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: #074969;
+    border: none;
+}
+
+.navbar .login-form .login-form-btn:hover {background-color: #0a5a83;}
+
+.navbar .login-form .form-control {padding: 0.1rem .55rem;}
+/* End Navbar*/
+
+
+/* Start Header */
+.header {height: 100vh;}
+
+.header .carousel .carousel-item {
+    background-size: cover;
+    height: 100%;
+}
+
+.header .carousel .carousel-item-1 {background-image: url(../images/header-bg-1.jpg);}
+
+.header .carousel .carousel-item-2 {background-image: url(../images/header-bg-2.jpg);}
+
+.header .carousel .carousel-item-3 {background-image: url(../images/header-bg-3.jpg);}
+
+.header-paragraph {position: relative; z-index: 998;}
+
+.header .header-paragraph h1 
+{
+    text-shadow: 0 0 10px #fff, 0 0 10px #fff;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    font-size: 60px;
+}
+
+.header .header-paragraph h3 {text-shadow: 0 0 4px #fff; font-weight: bold;}
+/* End Header */
+
+
+/* Start Special */
+.special {
+    background-image: url(../images/bg_covid.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.special .special-heading {padding-right: 15rem; padding-left: 15rem;}
+
+.special .special-heading h2 {color: #0A8C78; font-size: 44px;}
+
+.special .special-heading p {font-size: 32px;}
+
+.special .col-lg-3 {padding-left: 5px; padding-right: 5px;}
+
+.special-item {border-radius: 10px;}
+
+.special .special-item .special-img {transition: all 0.5s;}
+
+.special .special-item:hover .special-img {
+    transform: scale(1.1,1.1); 
+    cursor: pointer;
+}
+
+.special-item h3 {margin-bottom: 0; font-weight: 400;}
+
+.special-item button {
+    border-radius: 20px;
+    font-size: 0.8rem;
+    padding: 3px 15px;
+    margin-bottom: 10px;
+    color: #d71920;
+}
+/* End Special */
+
+
+/* Start Cloud City */
+.cloud-city .cloud-city-heading p {font-size: 20px;}
+
+.cloud-city .cloud-city-heading h2 {font-size: 40px;}
+/* End Cloud City */
+
+
+/* Start Tables Common Properties */
+.table-head h2 {font-size: 36px; position: relative;}
+
+.table-head h2::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.table-td {
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding: 12px 10px;
+    border-radius: 10px;
+}
+
+.table-td-icon {
+    background-color: #EAEAEA;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.table-td-p p,
+.table-td-icon p {margin-bottom: 0;}
+
+.table-td-p h5 {font-size: 16px; text-shadow: 0 0 2px #fff;}
+
+.table-td-p p {font-size: 15px;}
+
+.table-td-icon p {color: #1f5994; font-size: 30px; font-family: 'Barlow Semi Condensed', sans-serif;}
+/* End Tables Common Properties */
+
+
+/* Start Table - 1 - Smart Office */
+.smart-office .table-head h2 {color: #b01f24;}
+
+.smart-office .table-head h2::after {background-color: #b01f24; width: 250px;}
+
+.smart-office .workforce-table h4 {color: #603C44;}
+
+.smart-office .workforce-table .table-td {background-color: #603C44;}
+
+.smart-office .people-flow-table h4 {color: #B41F24;}
+
+.smart-office .people-flow-table .table-td {background-color: #B41F24;}
+
+.smart-office .smart-security-table h4 {color: #E82536;}
+
+.smart-office .smart-security-table .table-td {background-color: #E82536;}
+
+.smart-office .table-td-icon p {color: #d71920;}
+/* End Table - 1 - Smart Office */
+
+
+/* Start Table - 2 - Smart Residential */
+.smart-residential .table-head h2 {color: #1f5994;}
+
+.smart-residential .table-head h2::after {background-color: #1f5994; width: 350px;}
+
+.smart-residential .hosing-developer-table h4 {color: #0E557A;}
+
+.smart-residential .hosing-developer-table .table-td {background-color: #0E557A;}
+
+.smart-residential .community-table h4 {color: #4697AF;}
+
+.smart-residential .community-table .table-td {background-color: #4697AF;}
+
+.smart-residential .smart-home-table h4 {color: #1F98BE;}
+
+.smart-residential .smart-home-table .table-td {background-color: #1F98BE;}
+
+.smart-residential .table-td-icon p {color: #1f5994;}
+
+.smart-residential .table-td-p,
+.smart-industry .table-td-p {padding-top: 15px; padding-bottom: 15px;}
+/* End Table - 2 - Smart Residential */
+
+
+/* Start Table - 3 - Smart Industry */
+.smart-industry .table-head h2,
+.smart-industry h4 {color: #16b081;}
+
+.smart-industry .table-head h2::after {background-color: #16b081; width: 300px;}
+
+.smart-industry .table-td {background-color: #16b081;}
+
+.smart-industry .table-td-icon p {color: #0a8c78;}
+/* End Table - 3 - Smart Industry */
+
+
+/* Start iOT Hardware */
+.iot .col-1 {padding-left: 5px; padding-right: 5px;}
+
+.iot .table-head h2 {color: #50345d; font-size: 30px;}
+
+.iot .table-head h2::after {background-color: #50345d; width: 330px;}
+
+.iot .iot-p {
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 4rem;
+    padding-left: 35px;
+}
+
+.iot .iot-p::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #654366;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+}
+
+.iot .product-name {font-size: 12px;}
+
+.iot .products-container {border-bottom: 1px dotted #ccc;}
+/* End iOT Hardware */
+
+
+/* Start - Surveillance & LPR Camera -- Environmental Sensing */
+.cameras-container .col-2 {padding-right: 5px; padding-left: 5px;}
+
+.cameras-container .products-container {border-bottom: none;}
+/* End - Surveillance & LPR Camera -- Environmental Sensing */
+
+
+/* Start Product Catalogues */
+.product-catalogues {
+    background-image: url(../images/bg_building.jpg);
+    background-size: cover;
+}
+
+.product-catalogues h2 {color: #4f5559; font-size: 40px;}
+
+.product-catalogues .catalogue-link a {
+    font-size: 18px;
+    color: #00304c;
+    text-decoration: none;
+}
+/* End Product Catalogues */
+
+
+/* Start Ecosystem */
+.ecosystem .ecosystem-main i {font-size: 36px;}
+
+.ecosystem .ecosystem-main {cursor: pointer;}
+
+.ecosystem .ecosystem-hidden-layer {font-size: 14px;}
+
+.ecosystem .ecosystem-hidden-layer a:hover {color: #d71920;}
+/* End Ecosystem */
+
+
+/* Start Features */
+.features .features-term {font-size: 12px;}
+
+.features .features-term .features-img {margin-bottom: 5px; transition: all 0.5s;}
+
+.features .features-term:hover .features-img {transform: scale(1.2,1.2);}
+/* End Features */
+
+
+/* Start Main Footer */
+.main-footer {background-color: #32373C;}
+
+.main-footer .main-footer-menus ul {padding-left: 15px; color: #a7a9ac; font-size: 13px;}
+
+.main-footer .main-footer-menus li:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-footer .main-footer-menus h6 {color: #ebebec; font-size: 14px;}
+
+.main-footer .main-footer-social .main-footer-social-icons li {
+    display: inline-block;
+    font-size: 22px;
+    margin-left: 5px;
+}
+
+.main-footer .main-footer-social .main-footer-social-icons li:hover {
+    color: #00ACEE;
+    cursor: pointer;
+}
+/* End Main Footer */
+
+
+/* Start Second Footer */
+.second-footer {background-color: #25292E; color: #cbcbcb; font-size: 14px;}
+
+.second-footer h6, .second-footer p {font-size: 13px; margin-bottom: 0;}
+
+.second-footer .second-footer-menus .col-sm-4 {padding-right: 5px; padding-left: 5px; margin-bottom: 10px;}
+
+.second-footer .second-footer-term:hover {cursor: pointer;}
+
+.second-footer .second-footer-term  small {color: #707377; font-size: 12px;}
+/* End Second Footer */
+
+
+/* Start ContactUs Right Box */
+.contactus-box {
+    background-color: #EE5137;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    top: 250px;
+    right: -40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 999;
+    transform: rotate(-90deg);
+}
+/* End ContactUs Right Box */
+
+
+/* Start Chat Box */
+.chat-box {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #27AAE1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+/* End Chat Box */
+
+
+/* My Framwork */
+.text-red {color: #d71920}
+/* My Framwork */
+
+/* Media Query */
+/* Small Screens -- Max Width: 768px */
+@media (max-width:768px)
+{
+    /* Navbar */
+    .header-navbar .log-link {margin-left: 0;}
+
+    /* Header */
+    .header .header-paragraph h1 {font-size: 26px;}
+
+
+}
