@@ -145,7 +145,7 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
     border-radius: 20px;
     font-size: 0.8rem;
     padding: 3px 15px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     color: #d71920;
 }
 /* End Special */
@@ -357,9 +357,10 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 /* Start Second Footer */
 .second-footer {background-color: #25292E; color: #cbcbcb; font-size: 14px;}
 
-.second-footer h6, .second-footer p {font-size: 13px; margin-bottom: 0;}
+.second-footer h6,
+.second-footer p {font-size: 13px; margin-bottom: 0;}
 
-.second-footer .second-footer-menus .col-sm-4 {padding-right: 5px; padding-left: 5px; margin-bottom: 10px;}
+.second-footer .second-footer-menus .col-md-4 {padding-right: 5px; padding-left: 5px; margin-bottom: 10px;}
 
 .second-footer .second-footer-term:hover {cursor: pointer;}
 
@@ -409,11 +410,59 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 /* Small Screens -- Max Width: 768px */
 @media (max-width:768px)
 {
+    h2 {font-size: 34px !important;}
+
+    /* Special */
+    .special {padding: 1rem 0 !important;}
+
+    .special .special-heading h2 {font-size: 34px;}
+
+    .special .special-heading p {font-size: 26px;}
+
+    .special .col-lg-3 {padding-left: 25px; padding-right: 25px;}
+
+    /* Cloud City */
+    .cloud-city {padding: 0.5rem 0 !important;}
+
+    .cloud-city .cloud-city-heading p {font-size: 16px;}
+
+    .cloud-city .cloud-city-heading h2 {font-size: 32px;}
+
+    /* Product Catalogues */
+    .product-catalogues .catalogue-link a {font-size: 14px;}
+
+    /* Features */
+    .features .features-term {margin-bottom: 1rem;}
+
+    /* Main Footer */
+    .main-footer {padding-bottom: 15px;}
+
+    .main-footer .main-footer-social-icons {text-align: center;}
+
+    .main-footer .main-footer-social-logo {justify-content: center !important;}
+}
+
+/* Common Between Small & Medium Screens */
+@media (max-width: 991px)
+{
     /* Navbar */
-    .header-navbar .log-link {margin-left: 0;}
+    .header-navbar .search-site {display: none;}
 
     /* Header */
-    .header .header-paragraph h1 {font-size: 26px;}
+    .header .header-paragraph {padding: 0 50px;}
 
+    .header .header-paragraph h1 {
+        font-size: 36px; 
+        padding-top: 10rem;
+        margin-bottom: 10px !important;
+    }
 
+    .header .header-paragraph h3 {font-size: 24px;}
+
+    /* Special */
+    .special .special-heading {padding-right: 0; padding-left:0;}
+
+    .header-navbar .log-link {margin-left: 0;}
+
+    .special .special-item {margin-bottom: 1rem;}
 }
