@@ -177,15 +177,22 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
     margin-bottom: 10px;
     padding: 12px 10px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.table-td-icon {
+.table-td-icon {width: 15%;}
+
+.table-td-icon div {
     background-color: #EAEAEA;
     border: 3px solid #fff;
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
+
+.table-td-p {width: 85%; padding-left: 15px}
 
 .table-td-p p,
 .table-td-icon p {margin-bottom: 0;}
@@ -194,7 +201,11 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 
 .table-td-p p {font-size: 15px;}
 
-.table-td-icon p {color: #1f5994; font-size: 30px; font-family: 'Barlow Semi Condensed', sans-serif;}
+.table-td-icon p {
+    color: #1f5994;
+    font-size: 30px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
 /* End Tables Common Properties */
 
 
@@ -465,4 +476,16 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
     .header-navbar .log-link {margin-left: 0;}
 
     .special .special-item {margin-bottom: 1rem;}
+
+    /* Tables */
+    .smart-office h4,
+    .smart-residential h4,
+    .smart-industry h4 {font-size: 18px;}
+}
+
+/* Medium Screens */
+@media (min-width: 769px) and (max-width: 991px)
+{
+    /* Tables Common Properties */
+     .table-td-p {padding-left: 30px;}
 }
