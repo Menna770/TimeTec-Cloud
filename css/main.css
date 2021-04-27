@@ -1,5 +1,7 @@
 body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 
+html {scroll-behavior: smooth;}
+
 /* Start Navbar*/
 .header-navbar {
     background-color: #fff;
@@ -36,7 +38,7 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 
     100% {transform: translateY(0); opacity: 1;}
 }
-.header-navbar .dropdown:hover .dropdown-menu {display: block;}
+.header-navbar .dropdown:focus .dropdown-menu {display: block;}
 
 .header-navbar .dropdown-menu ul { list-style-type: disc;}
 
@@ -85,6 +87,44 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 .navbar .login-form .login-form-btn:hover {background-color: #0a5a83;}
 
 .navbar .login-form .form-control {padding: 0.1rem .55rem;}
+
+#signUpModal {
+    background-color: #ffffffd1;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#modalForm {
+    width: 400px;
+    height: 400px;
+    margin-top: 60px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#modalForm .modalContainer {padding: 25px;}
+
+#signUpModal h2 {
+    background-color: #27AAE1;
+    color: #fff;
+    padding: 20px;
+    margin: auto;
+}
+
+#signUpModal .form-group {margin-bottom: 30px;}
+
+#signUpModal #confirmBtn {
+    background-color: #27AAE1;
+     color: #fff; 
+     transition: all 0.3s;
+}
 /* End Navbar*/
 
 
@@ -132,10 +172,10 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 
 .special-item {border-radius: 10px;}
 
-.special .special-item .special-img {transition: all 0.5s;}
+.special .special-item .special-img {transition: all 0.7s;}
 
 .special .special-item:hover .special-img {
-    transform: scale(1.1,1.1); 
+    transform: scale(1.05,1.05); 
     cursor: pointer;
 }
 
@@ -172,7 +212,6 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 
 .table-td {
     color: #fff;
-    cursor: pointer;
     font-size: 13px;
     margin-bottom: 10px;
     padding: 12px 10px;
@@ -293,14 +332,91 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 
 .iot .product-name {font-size: 12px;}
 
-.iot .products-container {border-bottom: 1px dotted #ccc;}
+.iot .products {border-bottom: 1px dotted #ccc;}
+
+.iot .products-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.iot .products-container .product {
+    width: 10%;
+    padding: 0 5px;
+}
+
+.iot .product .product-modal-img:hover {cursor: pointer;}
+
+/* Start Products Modal Box */
+#productsModalBox {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: #ffffffd1;
+}
+
+#productsModalItem {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #6c757d;
+}
+
+#productsModalItem .img-controls {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#productsModalItem i {cursor: pointer;}
+
+#productsModalItem .close-control {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#productsModalItem #productModalName {
+    background-color: #27AAE1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%) ;
+    width: 210px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+/* End Products Modal Box */
 /* End iOT Hardware */
 
 
 /* Start - Surveillance & LPR Camera -- Environmental Sensing */
-.cameras-container .col-2 {padding-right: 5px; padding-left: 5px;}
+.cameras-container .products {
+    width: 50%; 
+    float: left; 
+    border-bottom: none;
+}
 
-.cameras-container .products-container {border-bottom: none;}
+.cameras-container .products-container .product {width: 20%;}
 /* End - Surveillance & LPR Camera -- Environmental Sensing */
 
 
@@ -320,7 +436,7 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 /* End Product Catalogues */
 
 
-/* Start Ecosystem */
+/* Start Ecosystem */ 
 .ecosystem .ecosystem-main i {font-size: 36px;}
 
 .ecosystem .ecosystem-main {cursor: pointer;}
@@ -375,7 +491,7 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 
 .second-footer .second-footer-term:hover {cursor: pointer;}
 
-.second-footer .second-footer-term  small {color: #707377; font-size: 12px;}
+.second-footer .second-footer-term small {color: #707377; font-size: 12px;}
 /* End Second Footer */
 
 
@@ -395,8 +511,8 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 /* End ContactUs Right Box */
 
 
-/* Start Chat Box */
-.chat-box {
+/* Start To Top Btn */
+.to-top-btn {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -405,12 +521,13 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 999;
     background-color: #27AAE1;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 }
-/* End Chat Box */
+/* End To Top Btn */
 
 
 /* My Framwork */
@@ -442,6 +559,9 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
     /* Product Catalogues */
     .product-catalogues .catalogue-link a {font-size: 14px;}
 
+    /* EcoSystem */
+    .ecosystem h2 {font-size: 31px !important;}
+
     /* Features */
     .features .features-term {margin-bottom: 1rem;}
 
@@ -458,6 +578,16 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
 {
     /* Navbar */
     .header-navbar .search-site {display: none;}
+
+    .navbar .log-in-btn:hover {
+        background: none;
+        border-radius: 0;
+    }
+
+    .navbar .log-link .login-form {
+        width: 350px;
+        left: 0;
+    }
 
     /* Header */
     .header .header-paragraph {padding: 0 50px;}
@@ -481,6 +611,12 @@ body {font-family: "Akkurat-Light",Helvetica,Arial,"Lucida Grande",sans-serif;}
     .smart-office h4,
     .smart-residential h4,
     .smart-industry h4 {font-size: 18px;}
+
+    /* iOT Hardware */
+    .iot .products-container .product {width: 20%; margin-bottom: 10px;}
+
+    .cameras-container .products {width: 100%; float: none;}
+    
 }
 
 /* Medium Screens */

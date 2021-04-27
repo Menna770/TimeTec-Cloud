@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <meta name="author" content="Menna Elad">
-        <meta name="keywords" content="cloud solutions, smart systems, attendance">
+        <meta name="keywords" content="cloud solutions, smart systems, attendance, security">
         <meta name="description" content="cloud solution">
 
         <link rel="icon" href="images/meta icon.jpg">
@@ -99,38 +99,28 @@
                       <form class="form-inline my-2 my-lg-0">
                         <input class="form-control search-site mr-sm-2" type="search" placeholder="&#xF002; Search Site" style="font-family:Arial, FontAwesome" aria-label="Search">
                       </form>
+
                       <div class="log-link">
-                        <button type="button" class="sign-up-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                        <button type="button" id="signUpBtn" class="sign-up-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
                           Sign up
                         </button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
+
+                        <div id="signUpModal">
+                          <div id="modalForm" class="shadow-lg">
+                            <h2 class="text-center mb-3">SIGN UP</h2>
+                            <div class="modalContainer">
+                              <div class="form-group">
+                                <input type="text" id="signUpName" class="form-control" placeholder="&#xF007; &nbsp; Full Name" style="font-family: FontAwesome;" autocomplete="off">
                               </div>
-                              <div class="modal-body">
-                                <form>
-                                  <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Username:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Password:</label>
-                                    <input type="password" class="form-control" id="message-text">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Re-Enter Password:</label>
-                                    <input type="password" class="form-control" id="message-text">
-                                  </div>
-                                </form>
+                              <div class="form-group">
+                                <input type="email" class="form-control" placeholder="&#xf0e0; &nbsp; Email Address" style="font-family: FontAwesome;" autocomplete="off">
                               </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary">Confirm</button>
+                              <div class="form-group">
+                                <input type="password" class="form-control" placeholder="&#xf023; &nbsp; Password" style="font-family: FontAwesome;" >
+                              </div>
+                              <div class="text-center mt-5">
+                                <button type="button" id="cancelBtn" class="btn btn-secondary mr-3" data-dismiss="modal">Cancel</button>
+                                <button type="button" id="confirmBtn"class="btn">Confirm</button>
                               </div>
                             </div>
                           </div>
@@ -139,15 +129,17 @@
 
                       <div class="log-link log-in-btn position-relative">
                         <a class="text-decoration-none" href="#">
-                          <i class="fas fa-lock"></i> Login <i class="fas fa-caret-down"></i>
+                          <i id="LogInIconLock" class="fas fa-lock"></i>
+                          <span id="accountName">Login</span>
+                          <i id="LogInIconDown" class="fas fa-caret-down"></i>
                         </a>
-                        <div class="login-form position-absolute">
+                        <div id="LogInForm" class="login-form position-absolute">
                           <form>
                             <div class="form-group">
-                              <input type="text" class="form-control username" placeholder="&#xF007; username" style="font-family: FontAwesome;" >
+                              <input type="text" class="form-control username" placeholder="&#xF007; &nbsp; username" style="font-family: FontAwesome;" >
                             </div>
                             <div class="form-group">
-                              <input type="password" class="form-control password" placeholder="&#xf023; *******" style="font-family: FontAwesome;" id="exampleInputPassword1">
+                              <input type="password" class="form-control password" placeholder="&#xf023; &nbsp; *******" style="font-family: FontAwesome;" id="exampleInputPassword1">
                             </div>
                             <small class="form-text"><a class="text-decoration-none">Forget Your Password?</a></small>
                             <div class="form-group form-check mt-2">
@@ -168,7 +160,7 @@
         <!-- End Navbar -->
 
         <!-- Start Header -->
-        <header class="header">  
+        <header id="top" class="header">  
             <div id="carouselExampleSlidesOnly" class="carousel carousel-fade slide" data-ride="carousel">
               
                 <div class="carousel-inner">
@@ -571,7 +563,7 @@
                           <div>
                             <p>Guard Module</p>
                           </div>
-                        </div>>
+                        </div>
                   </div>
 
                   <div class="table-td">
@@ -768,631 +760,501 @@
             </div>
 
             <!--Time Attendance & Patrol Clocking -->
-            <div class="products-container py-5">
+            <div class="products py-5">
               <p class="iot-p">Time Attendance & Patrol Clocking:</p>
 
-              <div class="row">
+              <div class="products-container">
 
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_ta200p.png">
+                      <img class="product-modal-img img-fluid" src="images/c_ta200p.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>TA200 Plus</p>
+                      <p class="product-modal-p">TA200 Plus</p>
                     </div>
                   </div>
-                </div>
-                
-  
-                <div class="col-1">
+               
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_ta100c.png">
+                      <img class="product-modal-img img-fluid" src="images/c_ta100c.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>TA100C</p>
+                      <p class="product-modal-p">TA100C</p>
                     </div>
                   </div>
-                </div>
-                
-  
-                <div class="col-1">
+
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_ac100c.png">
+                      <img class="product-modal-img img-fluid" src="images/c_ac100c.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>AC100C</p>
+                      <p class="product-modal-p">AC100C</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_ta700w.png">
+                      <img class="product-modal-img img-fluid" src="images/c_ta700w.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>TA700W</p>
+                      <p class="product-modal-p">TA700W</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_faceid4.png">
+                      <img class="product-modal-img img-fluid" src="images/c_faceid4.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>FaceID4</p>
+                      <p class="product-modal-p">FaceID4</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_qfmaster.png">
+                      <img class="product-modal-img img-fluid" src="images/c_qfmaster.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>QF Plus</p>
+                      <p class="product-modal-p">QF Plus</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_smartac1ftd.png">
+                      <img class="product-modal-img img-fluid" src="images/c_smartac1ftd.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart AC</p>
+                      <p class="product-modal-p">Smart AC</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_rd68.png">
+                      <img class="product-modal-img img-fluid" src="images/c_rd68.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>RD68</p>
+                      <p class="product-modal-p">RD68</p>
                     </div>
                   </div>
-                </div>
-                
-  
-                <div class="col-1">
+               
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_beacon.png">
+                      <img class="product-modal-img img-fluid" src="images/c_beacon.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Beacon</p>
+                      <p class="product-modal-p">Beacon</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_nfc.png">
+                      <img class="product-modal-img img-fluid" src="images/c_nfc.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>NFC Tag</p>
+                      <p class="product-modal-p">NFC Tag</p>
                     </div>
-                  </div>  
-                </div>
-                
+                  </div> 
+
               </div>
-
             </div>
 
             <!-- Access Control & Smart Community -->
-            <div class="products-container pb-5">
+            <div class="products pb-5">
               <p class="iot-p mt-4">Access Control & Smart Community:</p>
 
-              <div class="row">
+              <div class="products-container">
 
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_ble2.png">
+                      <img class="product-modal-img img-fluid" src="images/c_ble2.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>BLE 2</p>
+                      <p class="product-modal-p">BLE 2</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_ble16.png">
+                      <img class="product-modal-img img-fluid" src="images/c_ble16.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>BLE 16</p>
+                      <p class="product-modal-p">BLE 16</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_turnstile.png">
+                      <img class="product-modal-img img-fluid" src="images/c_turnstile.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart Turnstile</p>
+                      <p class="product-modal-p">Smart Turnstile</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_qfmaster.png">
+                      <img class="product-modal-img img-fluid" src="images/c_qfmaster.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>QF Plus</p>
+                      <p class="product-modal-p">QF Plus</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_smartac1td.png">
+                      <img class="product-modal-img img-fluid" src="images/c_smartac1td.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart AC</p>
+                      <p class="product-modal-p">Smart AC</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_r2.png">
+                      <img class="product-modal-img img-fluid" src="images/c_r2.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>R2</p>
+                      <p class="product-modal-p">R2</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_r3.png">
+                      <img class="product-modal-img img-fluid" src="images/c_r3.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>R3</p>
+                      <p class="product-modal-p">R3</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_faceid3.png">
+                      <img class="product-modal-img img-fluid" src="images/c_faceid3.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>FaceID3</p>
+                      <p class="product-modal-p">FaceID3</p>
                     </div>
                   </div>
-                </div>
-                
-  
-                <div class="col-1">
+               
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_kadex.png">
+                      <img class="product-modal-img img-fluid" src="images/c_kadex.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Kadex</p>
+                      <p class="product-modal-p">Kadex</p>
                     </div>
                   </div>
-                </div>
-                
-  
-                <div class="col-1">
+               
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_tl40b.png">
+                      <img class="product-modal-img img-fluid" src="images/c_tl40b.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>TL-40B</p>
+                      <p class="product-modal-p">TL-40B</p>
                     </div>
                   </div>  
-                </div>
-                
               </div>
-
             </div>
 
             <!-- Parking & Visitor Management -->
-            <div class="products-container pb-5">
+            <div class="products pb-5">
               <p class="iot-p mt-4">Parking & Visitor Management:</p>
 
-              <div class="row">
+              <div class="products-container">
 
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_tpk.png">
+                      <img class="product-modal-img img-fluid" src="images/c_tpk.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Parking Kiosk</p>
+                      <p class="product-modal-p">Parking Kiosk</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_UHF_Reader.png">
+                      <img class="product-modal-img img-fluid" src="images/c_UHF_Reader.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>UHF Reader</p>
+                      <p class="product-modal-p">UHF Reader</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_BarrieGate.png">
+                      <img class="product-modal-img img-fluid" src="images/c_BarrieGate.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Barrier Gate</p>
+                      <p class="product-modal-p">Barrier Gate</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_hubot_xv.png">
+                      <img class="product-modal-img img-fluid" src="images/c_hubot_xv.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Hubot XV</p>
+                      <p class="product-modal-p">Hubot XV</p>
                     </div>
                   </div>
-                </div>
-                
-  
-                <div class="col-1">
+               
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_qrmaster.png">
+                      <img class="product-modal-img img-fluid" src="images/c_qrmaster.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>QR Master</p>
+                      <p class="product-modal-p">QR Master</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_i-Vizit_Panel.png">
+                      <img class="product-modal-img img-fluid" src="images/c_i-Vizit_Panel.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>i-Vizit Panel</p>
+                      <p class="product-modal-p">i-Vizit Panel</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_icomm_panel.png">
+                      <img class="product-modal-img img-fluid" src="images/c_icomm_panel.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>i-Comm Panel</p>
+                      <p class="product-modal-p">i-Comm Panel</p>
                     </div>
                   </div>
-                </div>
-                
-  
-                
-                <div class="col-1">
+               
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_sirenkit.png">
+                      <img class="product-modal-img img-fluid" src="images/c_sirenkit.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Siren Kit</p>
+                      <p class="product-modal-p">Siren Kit</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_smartcardreader.png">
+                      <img class="product-modal-img img-fluid" src="images/c_smartcardreader.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart Card Reader</p>
+                      <p class="product-modal-p">Smart Card Reader</p>
                     </div>
                   </div>
-                </div>
                 
               </div>
-
             </div>
 
             <!-- Smart Home/Office -->
-            <div class="products-container pb-5">
+            <div class="products pb-5">
               <p class="iot-p mt-4">Smart Home/Office:</p>
 
-              <div class="row">
+              <div class="products-container">
 
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_Intruder-Alarm.png">
+                      <img class="product-modal-img img-fluid" src="images/c_Intruder-Alarm.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Intruder Alarm</p>
+                      <p class="product-modal-p">Intruder Alarm</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_CameraMonitoringAlarm.png">
+                      <img class="product-modal-img img-fluid" src="images/c_CameraMonitoringAlarm.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart Gateway Camera</p>
+                      <p class="product-modal-p">Smart Gateway Camera</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_WaterLeakingAlarm.png">
+                      <img class="product-modal-img img-fluid" src="images/c_WaterLeakingAlarm.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Water Leak Detector</p>
+                      <p class="product-modal-p">Water Leak Detector</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_SmokeAlarm.png">
+                      <img class="product-modal-img img-fluid" src="images/c_SmokeAlarm.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smoke Detector</p>
+                      <p class="product-modal-p">Smoke Detector</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_SmartCurtain.png">
+                      <img class="product-modal-img img-fluid" src="images/c_SmartCurtain.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart Curtain</p>
+                      <p class="product-modal-p">Smart Curtain</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_SmartLighting.png">
+                      <img class="product-modal-img img-fluid" src="images/c_SmartLighting.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart Lighting</p>
+                      <p class="product-modal-p">Smart Lighting</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_SmartScene.png">
+                      <img class="product-modal-img img-fluid" src="images/c_SmartScene.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart Scene</p>
+                      <p class="product-modal-p">Smart Scene</p>
                     </div>
                   </div>
-                </div>
-                
-  
-                
-                <div class="col-1">
+               
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_Smart-Air-Conditioning.png">
+                      <img class="product-modal-img img-fluid" src="images/c_Smart-Air-Conditioning.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>Smart Air-Conditioning</p>
+                      <p class="product-modal-p">Smart Air-Conditioning</p>
                     </div>
                   </div>
-                </div>
                 
-  
-                <div class="col-1">
                   <div class="product">
                     <div class="product-img">
-                      <img class="img-fluid" src="images/c_tl40b.png">
+                      <img class="product-modal-img img-fluid" src="images/c_tl40b.png">
                     </div>
                     <div class="product-name mt-1 text-center">
-                      <p>TL-40B</p>
+                      <p class="product-modal-p">TL-40B</p>
                     </div>
                   </div>
-                </div>
-                
               </div>
-
             </div>
-
 
             <!-- Start - Surveillance & LPR Camera -- Environmental Sensing -->
             <div class="cameras-container">
-              <div class="row">
                 <!-- Surveillance & LPR Camera -->
-                <div class="col-md-6">
-                  <div class="products-container pb-5">
+                  <div class="products pb-5">
                     <p class="iot-p mt-4">Surveillance & LPR Camera:</p>
       
-                    <div class="row">
+                    <div class="products-container">
       
-                      <div class="col-2">
                         <div class="product">
                           <div class="product-img">
-                            <img class="img-fluid" src="images/c_e17s.png">
+                            <img class="product-modal-img img-fluid" src="images/c_e17s.png">
                           </div>
                           <div class="product-name mt-1 text-center">
-                            <p>E17s</p>
+                            <p class="product-modal-p">E17s</p>
                           </div>
                         </div>
-                      </div>
                       
-        
-                      <div class="col-2">
                         <div class="product">
                           <div class="product-img">
-                            <img class="img-fluid" src="images/c_e16s.png">
+                            <img class="product-modal-img img-fluid" src="images/c_e16s.png">
                           </div>
                           <div class="product-name mt-1 text-center">
-                            <p>E16s</p>
+                            <p class="product-modal-p">E16s</p>
                           </div>
                         </div>
-                      </div>
                       
-        
-                      <div class="col-2">
                         <div class="product">
                           <div class="product-img">
-                            <img class="img-fluid" src="images/c_lpr_camera.png">
+                            <img class="product-modal-img img-fluid" src="images/c_lpr_camera.png">
                           </div>
                           <div class="product-name mt-1 text-center">
-                            <p>Camera LPR</p>
+                            <p class="product-modal-p">Camera LPR</p>
                           </div>
                         </div>
-                      </div>
                       
-        
-                      <div class="col-2">
                         <div class="product">
                           <div class="product-img">
-                            <img class="img-fluid" src="images/c_NVR.png">
+                            <img class="product-modal-img img-fluid" src="images/c_NVR.png">
                           </div>
                           <div class="product-name mt-1 text-center">
-                            <p>NVR Video Server</p>
+                            <p class="product-modal-p">NVR Video Server</p>
                           </div>
                         </div>
-                      </div>
-
+                     
+                        <div class="clearfix"></div>
                     </div>
-      
                   </div>
-                </div>
 
                 <!-- Environmental Sensing -->
-                <div class="col-md-6">
-                  <div class="products-container pb-5">
+                  <div class="products pb-5">
                     <p class="iot-p mt-4">Environmental Sensing:</p>
       
-                    <div class="row">
+                    <div class="products-container">
       
-                      <div class="col-2">
                         <div class="product">
                           <div class="product-img">
-                            <img class="img-fluid" src="images/c_g2000l.png">
+                            <img class="product-modal-img img-fluid" src="images/c_g2000l.png">
                           </div>
                           <div class="product-name mt-1 text-center">
-                            <p>iRadar G2000 Series</p>
+                            <p class="product-modal-p">iRadar G2000 Series</p>
                           </div>
                         </div>
-                      </div>
                       
-        
-                      <div class="col-2">
                         <div class="product">
                           <div class="product-img">
-                            <img class="img-fluid" src="images/c_e120.png">
+                            <img class="product-modal-img img-fluid" src="images/c_e120.png">
                           </div>
                           <div class="product-name mt-1 text-center">
-                            <p>i-Environ</p>
+                            <p class="product-modal-p">i-Environ</p>
                           </div>
                         </div>
-                      </div>
                       
-        
-                      <div class="col-2">
                         <div class="product">
                           <div class="product-img">
-                            <img class="img-fluid" src="images/c_Lidar.png">
+                            <img class="product-modal-img img-fluid" src="images/c_Lidar.png">
                           </div>
                           <div class="product-name mt-1 text-center">
-                            <p>Lidar M8</p>
+                            <p class="product-modal-p">Lidar M8</p>
                           </div>
                         </div>
-                      </div>
                       
-        
-                      <div class="col-2">
                         <div class="product">
                           <div class="product-img">
-                            <img class="img-fluid" src="images/c_CompactSAR.png">
+                            <img class="product-modal-img img-fluid" src="images/c_CompactSAR.png">
                           </div>
                           <div class="product-name mt-1 text-center">
-                            <p>Compact SAR</p>
+                            <p class="product-modal-p">Compact SAR</p>
                           </div>
                         </div>
-                      </div>
 
+                        <div class="clearfix"></div>
                     </div>
       
                   </div>
-                </div>
-
-              </div>
+                  <div class="clearfix"></div>
+               
             </div>
             <!-- Surveillance & LPR Camera -- Environmental Sensing -->
-
-
           </div>
         </section>
         <!-- End iOT Hardware -->
+
+
+        <!-- Start Products Modal Box -->
+        <div id="productsModalBox">
+          <div id="productsModalItem" class="shadow-lg">
+            <div class="close-control">
+              <i id="closeBtn" class="fas fa-times"></i>
+            </div>
+            <div class="img-controls">
+              <i id="prev" class="fas fa-chevron-left"></i>
+              <img id="modalBgImg">
+              <i id="next" class="fas fa-chevron-right"></i>
+            </div>
+            <div class="modal-name">
+              <p id="productModalName" class="shadow-sm"></p>
+            </div>
+          </div>
+        </div>
+        <!-- End Products Modal Box -->
 
 
         <!-- Start Product Catalogues -->
@@ -1859,15 +1721,14 @@
         </div>
         <!-- End ContactUs Right Box-->
 
-        <!-- Start Chat Box -->
-        <div class="chat-box">
-          <abbr title="Chat with us !">
-            <i class="far fa-comment fa-2x"></i>
-          </abbr>
+        <!-- Start To Top Btn -->
+        <div class="to-top-btn">
+          <a href="#top" class="text-decoration-none text-white">
+            <i class="fas fa-chevron-up"></i>
+          </a>
         </div>
-        <!-- End Chat Box -->
+        <!-- End To Top Btn -->
 
-        
         <script src="js/popper.min.js"></script>
         <script src="js/jquery-3.5.1.slim.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
